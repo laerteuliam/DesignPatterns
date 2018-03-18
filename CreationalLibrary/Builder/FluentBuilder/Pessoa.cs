@@ -1,4 +1,4 @@
-﻿namespace CreationalLibrary.FluentBuilder
+﻿namespace CreationalLibrary.Builder.FluentBuilder
 {
     public class Pessoa
     {

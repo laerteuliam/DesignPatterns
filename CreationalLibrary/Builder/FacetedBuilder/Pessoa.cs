@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CreationalLibrary.FacetedBuilder
+namespace CreationalLibrary.Builder.FacetedBuilder
 {
     public class Pessoa
     {
