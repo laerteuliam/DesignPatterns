@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Structural", "3 - Struc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Behavioral", "4 - Behavioral", "{5E55CA6B-3072-4CD1-A996-AA2B0E93E9B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{490A6EDC-EC8B-470D-A7A7-BD4A02253412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{490A6EDC-EC8B-470D-A7A7-BD4A02253412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationalLibrary", "CreationalLibrary\CreationalLibrary.csproj", "{12BB75F8-DFF6-462B-94F1-EC52EAFE3D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreationalLibrary", "CreationalLibrary\CreationalLibrary.csproj", "{12BB75F8-DFF6-462B-94F1-EC52EAFE3D57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,11 +7,14 @@ namespace UI
     {
         static void Main(string[] args)
         {
-            FluentBuilder();
-            FacetedBuilder();
-            AbstractFactory();
+            //FluentBuilder();
+            //FacetedBuilder();
+            //AbstractFactory();
+            ConstructorPrototype();
             Console.Read();
         }
+
+        #region Factories
 
         private static void AbstractFactory()
         {
@@ -20,6 +23,9 @@ namespace UI
             bebida.Consumir();
         }
 
+        #endregion
+
+        #region Builders
         private static void FacetedBuilder()
         {
             Console.WriteLine("--- Faceted Builder ---");
@@ -47,5 +53,20 @@ namespace UI
 
             Console.WriteLine(pessoa.ToString());
         }
+        #endregion
+
+        #region Prototypes
+        public static void ConstructorPrototype()
+        {
+            var enderecoLaerte = new CreationalLibrary.Prototype.Constructors.Endereco("São Paulo", "SP", "Rua Dr Vila Nova", "xxx");
+            var laerte = new CreationalLibrary.Prototype.Constructors.Pessoa("Laerte", enderecoLaerte);
+
+            var ira = new CreationalLibrary.Prototype.Constructors.Pessoa(laerte);
+            ira.Nome = "Ira";
+
+            Console.WriteLine(laerte.ToString());
+            Console.WriteLine(ira.ToString());
+        }
+        #endregion
     }
 }
