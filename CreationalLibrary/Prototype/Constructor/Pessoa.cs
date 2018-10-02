@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CreationalLibrary.Prototype.Constructors
+namespace CreationalLibrary.Prototype.Constructor
 {
     public class Pessoa
     {

@@ -1,4 +1,5 @@
 ﻿using CreationalLibrary.Factory.AbstractFactory;
+using CreationalLibrary.Prototype.DeepCopy;
 using System;
 
 namespace UI
@@ -10,7 +11,8 @@ namespace UI
             //FluentBuilder();
             //FacetedBuilder();
             //AbstractFactory();
-            ConstructorPrototype();
+            //ConstructorPrototype();
+            DeepCopyPrototype();
             Console.Read();
         }
 
@@ -58,10 +60,22 @@ namespace UI
         #region Prototypes
         public static void ConstructorPrototype()
         {
-            var enderecoLaerte = new CreationalLibrary.Prototype.Constructors.Endereco("São Paulo", "SP", "Rua Dr Vila Nova", "xxx");
-            var laerte = new CreationalLibrary.Prototype.Constructors.Pessoa("Laerte", enderecoLaerte);
+            var enderecoLaerte = new CreationalLibrary.Prototype.Constructor.Endereco("São Paulo", "SP", "Rua Dr Vila Nova", "xxx");
+            var laerte = new CreationalLibrary.Prototype.Constructor.Pessoa("Laerte", enderecoLaerte);
 
-            var ira = new CreationalLibrary.Prototype.Constructors.Pessoa(laerte);
+            var ira = new CreationalLibrary.Prototype.Constructor.Pessoa(laerte);
+            ira.Nome = "Ira";
+
+            Console.WriteLine(laerte.ToString());
+            Console.WriteLine(ira.ToString());
+        }
+
+        public static void DeepCopyPrototype()
+        {
+            var enderecoLaerte = new CreationalLibrary.Prototype.DeepCopy.Endereco("São Paulo", "SP", "Rua Dr Vila Nova", "xxx");
+            var laerte = new CreationalLibrary.Prototype.DeepCopy.Pessoa("Laerte", enderecoLaerte);
+
+            var ira = laerte.DeepCopy();
             ira.Nome = "Ira";
 
             Console.WriteLine(laerte.ToString());
