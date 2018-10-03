@@ -12,7 +12,8 @@ namespace UI
             //FacetedBuilder();
             //AbstractFactory();
             //ConstructorPrototype();
-            DeepCopyPrototype();
+            //DeepCopyPrototype();
+            SingletonDatabase();
             Console.Read();
         }
 
@@ -80,6 +81,18 @@ namespace UI
 
             Console.WriteLine(laerte.ToString());
             Console.WriteLine(ira.ToString());
+        }
+        #endregion
+
+        #region Singleton
+        public static void SingletonDatabase()
+        {
+            var db = CreationalLibrary.Singleton.SingletonDatabase.Instance;
+            var db2 = CreationalLibrary.Singleton.SingletonDatabase.Instance;
+            var db3 = CreationalLibrary.Singleton.SingletonDatabase.Instance;
+            var count = CreationalLibrary.Singleton.SingletonDatabase.Count;
+
+            Console.WriteLine($"Quantidade de Instâncias {count}");
         }
         #endregion
     }

@@ -10,8 +10,7 @@ namespace CreationalLibrary.Tests
         {
             var db = SingletonDatabase.Instance;
             var db2 = SingletonDatabase.Instance;
-
-            Assert.Equal(db, db2);
+            Assert.True(db.Equals(db2));
         }
     }
 }

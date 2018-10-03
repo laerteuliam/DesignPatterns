@@ -14,9 +14,9 @@ namespace CreationalLibrary.Singleton
     {
         private Dictionary<string, int> capitals;
         private static int instanceCount;
+        public static int Count => instanceCount;
         private static Lazy<SingletonDatabase> instance = new Lazy<SingletonDatabase>(() =>
         {
-            instanceCount++;
             return new SingletonDatabase();
         }
         );
@@ -24,6 +24,7 @@ namespace CreationalLibrary.Singleton
 
         private SingletonDatabase()
         {
+            instanceCount++;
             Console.WriteLine("Initialiazing Database");
             var pathFile = Path.Combine(new FileInfo(typeof(IDatabase).Assembly.Location).DirectoryName, "capitals.txt");
             capitals = File.ReadAllLines(pathFile)
