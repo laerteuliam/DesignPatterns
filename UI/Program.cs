@@ -13,10 +13,11 @@ namespace UI
             //AbstractFactory();
             //ConstructorPrototype();
             //DeepCopyPrototype();
-            SingletonDatabase();
+            //SingletonDatabase();
+            MonoState();
             Console.Read();
         }
-
+        
         #region Factories
 
         private static void AbstractFactory()
@@ -85,8 +86,10 @@ namespace UI
         #endregion
 
         #region Singleton
-        public static void SingletonDatabase()
+        private static void SingletonDatabase()
         {
+            Console.WriteLine("Singleton Database");
+
             var db = CreationalLibrary.Singleton.SingletonDatabase.Instance;
             var db2 = CreationalLibrary.Singleton.SingletonDatabase.Instance;
             var db3 = CreationalLibrary.Singleton.SingletonDatabase.Instance;
@@ -94,6 +97,20 @@ namespace UI
 
             Console.WriteLine($"Quantidade de Instâncias {count}");
         }
+
+        private static void MonoState()
+        {
+            Console.WriteLine("MonoState");
+            var ceo = new CreationalLibrary.Monostate.CEO();
+            ceo.Name = "Laerte";
+            ceo.Age = 34;
+            var ceo2 = new CreationalLibrary.Monostate.CEO();
+
+            Console.WriteLine(ceo.ToString());
+            Console.WriteLine(ceo2.ToString());
+        }
         #endregion
+
+
     }
 }
