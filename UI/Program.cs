@@ -2,7 +2,7 @@
 using CreationalLibrary.Prototype.DeepCopy;
 using System;
 
-namespace UI
+namespace Creational.UI
 {
     class Program
     {
